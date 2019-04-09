@@ -1,0 +1,22 @@
+<h1>Clientes</h1>
+<p *ngIf="!(clientes && clientes.length)">No existen registros para mostrar</p>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Fecha de Nacimiento</th>
+      <th>Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{ cliente.nombre }}</td>
+      <td>{{ cliente.fechaNacimiento }}</td>
+      <td>
+        <button>Editar</button>
+        <button>Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
